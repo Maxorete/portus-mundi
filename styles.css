@@ -1,0 +1,29 @@
+.table input {
+  width: 100%;
+}
+
+.ability_input {
+  width: 40px;
+  text-align: center;
+}
+
+.ability_button {
+  width: 122px;
+}
+
+.caracteristic_input {
+  width: 160px;
+  text-align: center;
+}
+
+.stat {
+  width: 50px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.div_span_input {
+  width: 150px;
+  margin-bottom: 8px;
+}
+

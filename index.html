@@ -1,0 +1,429 @@
+<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="styles.css" rel="stylesheet" />
+<script src="index.js"></script>
+
+<div class="container" style="padding-top: 40px">
+    <div class="row">
+        <div class="col-10">
+            <table class="row">
+                <!-- Aca van los scores -->
+                <tr>
+                    <th>
+                        <div class="col-2">
+                            <input type="number" value="1" id="forScore" class="caracteristic_input" onchange="updateModifiers()" />
+                            <h2>Fortaleza</h2>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="col-2">
+                            <input type="number" value="1" id="desScore" class="caracteristic_input" onchange="updateModifiers()" />
+                            <h2>Destreza</h2>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="col-2">
+                            <input type="number" value="1" id="ingScore" class="caracteristic_input" onchange="updateModifiers()" />
+                            <h2>Ingenio</h2>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="col-2">
+                            <input type="number" value="1" id="perScore" class="caracteristic_input" onchange="updateModifiers()" />
+                            <h2>Percepción</h2>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="col-2">
+                            <input type="number" value="1" id="volScore" class="caracteristic_input" onchange="updateModifiers()" />
+                            <h2>Voluntad</h2>
+                        </div>
+                    </th>
+                </tr>
+
+                <!-- Aca esta la primer fila de habilidades -->
+                <tr>
+                    <td>
+                        <button onclick="abilityDice('atletismoScore', 'forScore', 'Atletismo')" class="ability_button">
+                            Atletismo
+                        </button>
+                        <input type="number" value="0" id="atletismoScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('armasCCScore', 'desScore', 'Armas C.C.')" class="ability_button">
+                            Armas C.C.
+                        </button>
+                        <input type="number" value="0" id="armasCCScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('cienciasScore', 'ingScore', 'Ciencias')" class="ability_button">
+                            Ciencias
+                        </button>
+                        <input type="number" value="0" id="cienciasScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('advertirScore', 'perScore', 'Advertir')" class="ability_button">
+                            Advertir
+                        </button>
+                        <input type="number" value="0" id="advertirScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('arteScore', 'volScore', 'Arte')" class="ability_button">
+                            Arte
+                        </button>
+                        <input type="number" value="0" id="arteScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la segunda fila de habilidades -->
+                <tr>
+                    <td>
+                        <button onclick="abilityDice('fuerzaScore', 'forScore', 'Fuerza')" class="ability_button" >
+                            Fuerza
+                        </button>
+                        <input type="number" value="0" id="fuerzaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('conducirScore', 'desScore', 'Conducir')" class="ability_button">
+                            Conducir
+                        </button>
+                        <input type="number" value="0" id="conducirScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('culturaScore', 'ingScore', 'Cultura')" class="ability_button">
+                            Cultura
+                        </button>
+                        <input type="number" value="0" id="culturaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('callejeoScore', 'perScore', 'Callejeo')" class="ability_button">
+                            Callejeo
+                        </button>
+                        <input type="number" value="0" id="callejeoScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('carismaScore', 'volScore', 'Carisma')" class="ability_button">
+                            Carisma
+                        </button>
+                        <input type="number" value="0" id="carismaScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la tercer fila de habilidades -->
+                <tr>
+                    <td>
+                        <button onclick="abilityDice('nadarScore', 'forScore', 'Nadar')" class="ability_button">
+                            Nadar
+                        </button>
+                        <input type="number" value="0" id="nadarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('esquivarScore', 'desScore', 'Esquivar')" class="ability_button">
+                            Esquivar
+                        </button>
+                        <input type="number" value="0" id="esquivarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('esconderScore', 'ingScore', 'Esconder')" class="ability_button">
+                            Esconder
+                        </button>
+                        <input type="number" value="0" id="esconderScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('empatiaScore', 'perScore', 'Empatía')" class="ability_button">
+                            Empatía
+                        </button>
+                        <input type="number" value="0" id="empatiaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('forjaScore', 'volScore', 'Forja')" class="ability_button">
+                            Forja
+                        </button>
+                        <input type="number" value="0" id="forjaScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la cuarta fila de habilidades -->
+                <tr>
+                    <td>
+                        <button onclick="abilityDice('resistenciaScore', 'forScore', 'Resistencia')" class="ability_button">
+                            Resistencia
+                        </button>
+                        <input type="number" value="0" id="resistenciaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('montarScore', 'desScore', 'Montar')" class="ability_button">
+                            Montar
+                        </button>
+                        <input type="number" value="0" id="montarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('informaticaScore', 'ingScore', 'Informática')" class="ability_button">
+                            Informática
+                        </button>
+                        <input type="number" value="0" id="informaticaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('enganarScore', 'perScore', 'Engañar')" class="ability_button">
+                            Engañar
+                        </button>
+                        <input type="number" value="0" id="enganarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('frialdadScore', 'volScore', 'Frialdad')" class="ability_button">
+                            Frialdad
+                        </button>
+                        <input type="number" value="0" id="frialdadScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la quinta fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('pelearScore', 'desScore', 'Pelear')" class="ability_button">
+                            Pelear
+                        </button>
+                        <input type="number" value="0" id="pelearScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('investigarScore', 'ingScore', 'Investigar')" class="ability_button">
+                            Investigar
+                        </button>
+                        <input type="number" value="0" id="investigarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('falsificarScore', 'perScore', 'Falsificar')" class="ability_button">
+                            Falsificar
+                        </button>
+                        <input type="number" value="0" id="falsificarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('intimidarScore', 'volScore', 'Intimidar')" class="ability_button">
+                            Intimidar
+                        </button>
+                        <input type="number" value="0" id="intimidarScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la sexta fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('pilotarScore', 'desScore', 'Pilotar')" class="ability_button">
+                            Pilotar
+                        </button>
+                        <input type="number" value="0" id="pilotarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('leyesScore', 'ingScore', 'Leyes')" class="ability_button">
+                            Leyes
+                        </button>
+                        <input type="number" value="0" id="leyesScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('persuacionScore', 'perScore', 'Persuación')" class="ability_button">
+                            Persuación
+                        </button>
+                        <input type="number" value="0" id="persuacionScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('juegosScore', 'volScore', 'Juegos')" class="ability_button">
+                            Juegos
+                        </button>
+                        <input type="number" value="0" id="juegosScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la septima fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('pilotarMechaScore', 'desScore', 'Pilotar Mecha')" class="ability_button">
+                            Pilotar Mecha
+                        </button>
+                        <input type="number" value="0" id="pilotarMechaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('mecanicaScore', 'ingScore', 'Mecánica')" class="ability_button">
+                            Mecánica
+                        </button>
+                        <input type="number" value="0" id="mecanicaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('rastrearScore', 'perScore', 'Rastrear')" class="ability_button">
+                            Rastrear
+                        </button>
+                        <input type="number" value="0" id="rastrearScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('lenguajesScore', 'volScore', 'Lenguajes')" class="ability_button">
+                            Lenguajes
+                        </button>
+                        <input type="number" value="0" id="lenguajesScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la octaba fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('punteriaScore', 'desScore', 'Puntería')" class="ability_button">
+                            Puntería
+                        </button>
+                        <input type="number" value="0" id="punteriaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('medicinaScore', 'ingScore', 'Medicina')" class="ability_button">
+                            Medicina
+                        </button>
+                        <input type="number" value="0" id="medicinaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('supervivenciaScore', 'perScore', 'Supervivencia')" class="ability_button">
+                            Supervivencia
+                        </button>
+                        <input type="number" value="0" id="supervivenciaScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('mandoScore', 'volScore', 'Mando')" class="ability_button">
+                            Mando
+                        </button>
+                        <input type="number" value="0" id="mandoScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la novena fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('robarScore', 'desScore', 'Robar')" class="ability_button">
+                            Robar
+                        </button>
+                        <input type="number" value="0" id="robarScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('negociosScore', 'ingScore', 'Negocios')" class="ability_button">
+                            Negocios
+                        </button>
+                        <input type="number" value="0" id="negociosScore" class="ability_input" />
+                    </td>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('valentiaScore', 'volScore', 'Valentía')" class="ability_button">
+                            Valentía
+                        </button>
+                        <input type="number" value="0" id="valentiaScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la decima fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('sigiloScore', 'desScore', 'Sigilo')" class="ability_button">
+                            Sigilo
+                        </button>
+                        <input type="number" value="0" id="sigiloScore" class="ability_input" />
+                    </td>
+                    <td>
+                        <button onclick="abilityDice('roboticaScore', 'ingScore', 'Robótica')" class="ability_button">
+                            Robótica
+                        </button>
+                        <input type="number" value="0" id="roboticaScore" class="ability_input" />
+                    </td>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('venenosScore', 'volScore', 'Venenos')" class="ability_button">
+                            Venenos
+                        </button>
+                        <input type="number" value="0" id="venenosScore" class="ability_input" />
+                    </td>
+                </tr>
+
+                <!-- Aca esta la decimo-primer fila de habilidades -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button onclick="abilityDice('tacticaScore', 'ingScore', 'Táctica')" class="ability_button">
+                            Táctica
+                        </button>
+                        <input type="number" value="0" id="tacticaScore" class="ability_input" />
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-2">
+            <div class="div_span_input">
+                <h3>Vitalidad</h3>
+                <input class="stat" type="number" id="currentVitalidad" placeholder="0" /> /
+                <input class="stat" type="number" id="maxVitalidad" placeholder="0" />
+            </div>
+
+            <div class="div_span_input">
+                <h3>Aguante</h3>
+                <input class="stat" type="number" id="currentAguante" placeholder="0" /> /
+                <input class="stat" type="number" id="maxAguante" placeholder="0" />
+            </div>
+
+            <div class="div_span_input">
+                <h4>Puntos de Trama</h4>
+                <input class="stat" type="number" id="currentTrama" placeholder="0" /> /
+                <input class="stat" type="number" id="maxTrama" placeholder="0" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Heridas</span>
+                <input class="stat" type="number" id="heridas" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Reacción</span>
+                <input class="stat" type="number" id="reaccion" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Apariencia</span>
+                <input class="stat" type="number" id="apariencia" value="2" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Influencia</span>
+                <input class="stat" type="number" id="influencia" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Reputación</span>
+                <input class="stat" type="number" id="reputacion" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Fama</span>
+                <input class="stat" type="number" id="fama" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Linaje</span>
+                <input class="stat" type="number" id="linaje" placeholder="0" style="float: right;" />
+            </div>
+
+            <div class="div_span_input">
+                <span>Recursos</span>
+                <input class="stat" type="number" id="recursos" placeholder="0" style="float: right;" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <h3>Resultado:</h3>
+        <textarea id="diceResult" placeholder="Tire dadiños señore"></textarea>
+    </div>
+</div>
