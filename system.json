@@ -23,6 +23,6 @@
   "secondaryTokenAttribute": "Aguante",
   "url": "https://github.com/Maxorete/portus-mundi",
   "manifest": "https://github.com/Maxorete/portus-mundi/system.json",
-  "download": "https://github.com/Maxorete/portus-mundi.git",
+  "download": "https://github.com/Maxorete/portus-mundi/archive/main.zip",
   "license": "LICENSE.txt"
 }
